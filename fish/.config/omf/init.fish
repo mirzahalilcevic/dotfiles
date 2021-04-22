@@ -1,3 +1,4 @@
+set PATH $HOME/.node-v14.16.0-linux-x64/bin $PATH
 set PATH $HOME/dev_environment_ubuntu/dev-container-ubuntu $PATH
 
 # aliases

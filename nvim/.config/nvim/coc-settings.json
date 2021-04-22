@@ -11,17 +11,22 @@
   "languageserver": {
     "ccls": {
       "command": "ccls",
+      "args": ["-log-file-append=0", "-log-file=/tmp/ccls.log"],
       "filetypes": ["c", "cpp", "cuda"],
-      "rootPatterns": [".ccls-root", "compile_commands.json"],
+      "rootPatterns": [".ccls-root", "compile_commands.json", ".git/"],
+      "clang": {
+        "extraArgs": ["-std=c++17", "-stdlib=libc++"]
+      },
       "initializationOptions": {
         "cache": {
           "directory": "/home/mirza/.ccls-cache"
         },
-        "index": {
-          "threads": 4
-        },
         "highlight": {
           "lsRanges": true
+        },
+        "compilationDatabaseDirectory": "build",
+        "index": {
+          "threads": 4
         }
       }
     }
